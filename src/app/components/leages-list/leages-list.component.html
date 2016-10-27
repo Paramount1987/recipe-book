@@ -1,0 +1,8 @@
+
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let leage of leages">
+        <a [routerLink]="['/leage', leage.id]" (click)="onClickLeage(leage.id)">{{leage.caption}}</a>
+      </li>
+    </ul>
+
+

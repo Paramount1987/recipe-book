@@ -1,0 +1,13 @@
+<div *ngIf="!id">
+  Choose a league
+</div>
+
+<div *ngIf="league">
+  <div class="jumbotron">
+    <h1>{{ league.leagueCaption }}</h1>
+  </div>
+</div>
+
+<div *ngIf="anyErrors">
+  <p class="bg-danger">{{anyErrors.error}}</p>
+</div>

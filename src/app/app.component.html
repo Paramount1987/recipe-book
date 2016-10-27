@@ -1,4 +1,17 @@
-<rb-header></rb-header>
-<div class="container">
-  <rb-recipes></rb-recipes>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <rb-header></rb-header>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-lg-3">
+      <rb-leages-list></rb-leages-list>
+    </div>
+    <div class="col-md-8 col-lg-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
+
+
