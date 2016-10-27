@@ -2,12 +2,32 @@
   Choose a league
 </div>
 
-<div *ngIf="league">
-  <div class="jumbotron">
-    <h1>{{ league.leagueCaption }}</h1>
-  </div>
-</div>
-
 <div *ngIf="anyErrors">
   <p class="bg-danger">{{anyErrors.error}}</p>
 </div>
+
+<div *ngIf="league">
+    <h2 class="bg-success">{{ league.leagueCaption }}</h2>
+
+  <table class="table table-hover table-bordered table-team">
+    <thead>
+    <tr>
+      <td>#</td>
+      <td>team</td>
+      <td>logo</td>
+      <td>points</td>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let team of league.standing">
+        <td>{{team.position}}</td>
+        <td><img src="{{team.crestURI}}" alt="" class="img-logo"/></td>
+        <td>{{team.teamName}}</td>
+        <td>{{team.points}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+

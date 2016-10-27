@@ -1,0 +1,17 @@
+.table-team {
+  table-layout: fixed;
+  width: auto;
+}
+.table-team td:first-child,
+.table-team td:last-child,
+.table-team td:nth-child(2){
+  width: 15px;
+}
+
+.table-team td:nth-child(3){
+  width: 300px;
+}
+
+.img-logo{
+  width: 20px;
+}
