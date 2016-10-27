@@ -10,13 +10,17 @@ import { HeaderComponent } from './header/header.component';
 import { FootballService } from './service/football.service';
 import { LeagesListComponent } from './components/leages-list/leages-list.component';
 import { LeageItemComponent } from './components/leage-item/leage-item.component';
+import { LeaguetableComponent } from './components/leage-item/leaguetable.component';
+import { LeagueplayersComponent } from './components/leage-item/leagueplayers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LeagesListComponent,
-    LeageItemComponent
+    LeageItemComponent,
+    LeaguetableComponent,
+    LeagueplayersComponent
   ],
   imports: [
     BrowserModule,
