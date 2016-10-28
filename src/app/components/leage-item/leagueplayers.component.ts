@@ -1,6 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-
-import { ActivatedRoute} from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { FootballService } from '../../service/football.service';
 
@@ -9,22 +7,13 @@ import { FootballService } from '../../service/football.service';
   templateUrl: './leagueplayers.component.html',
   styleUrls: ['./leagueplayers.component.css']
 })
-export class LeagueplayersComponent implements OnInit, OnDestroy {
+export class LeagueplayersComponent implements OnInit {
+  @Input() players: any;
+  @Input() team: any;
 
-  private id: number;
-  private sub: any;
-  private anyErrors: Error;
-
-  public players: any;
-
-  constructor(private route: ActivatedRoute,
-              private footballService: FootballService) { }
+  constructor(private footballService: FootballService) { }
 
   ngOnInit() {
-
-  }
-
-  ngOnDestroy() {
 
   }
 

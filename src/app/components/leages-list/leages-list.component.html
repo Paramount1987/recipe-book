@@ -1,8 +1,17 @@
-
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Leagues list</h3>
+  </div>
+  <div class="panel-body">
+    <div class="well well-sm" *ngIf="!leages">Loading list...</div>
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let leage of leages">
         <a [routerLink]="['/leage', leage.id]" (click)="onClickLeage(leage.id)">{{leage.caption}}</a>
       </li>
     </ul>
+  </div>
+</div>
+
+
 
 

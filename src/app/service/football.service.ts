@@ -7,7 +7,6 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class FootballService {
   private api: string = 'http://api.football-data.org/v1/competitions/';
-  private apiPlayers: string = 'http://api.football-data.org/v1/teams/';
   private _header: Headers;
   private options: any;
 
@@ -25,7 +24,7 @@ export class FootballService {
   }
 
   getPlayersItem(api:string): Observable<any> {
-    return this._http.get( api, this.options).map((response) => response.json());
+    return this._http.get( `${api}/players`, this.options).map((response) => response.json());
   }
 
 }

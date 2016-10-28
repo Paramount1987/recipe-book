@@ -11,8 +11,7 @@ const routes: Routes = [
   { path: 'leage/:id', component: LeageItemComponent,
     children: [
       { path: '', redirectTo: 'leagueTeams', pathMatch: 'full' },
-      { path: 'leagueTeams', component: LeaguetableComponent },
-      { path: 'players', component: LeagueplayersComponent }
+      { path: 'leagueTeams', component: LeaguetableComponent }
     ]}
 ];
 

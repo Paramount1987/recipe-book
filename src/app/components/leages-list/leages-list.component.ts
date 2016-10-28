@@ -9,7 +9,7 @@ import { LEAGES } from '../../data/leages.data';
   styleUrls: ['./leages-list.component.css']
 })
 export class LeagesListComponent implements OnInit {
-  private leages: any;
+  private leages: any[];
 
   constructor(private footballService: FootballService) { }
 
